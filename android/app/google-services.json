@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "73434815672",
+    "project_id": "flutter-todo-list-bba3d",
+    "storage_bucket": "flutter-todo-list-bba3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73434815672:android:3b3625103e333cfec3284d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_to_do_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Kk3P0u1Welvycg1SWEsPAbgYOCkZ4Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
