@@ -1,5 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/data/firestor.dart';
+import 'package:flutter_to_do_list/screen/home.dart';
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
 
 abstract class AuthenticationDatasource {
   Future<void> register(String email, String password, String PasswordConfirm);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
 import 'package:flutter_to_do_list/data/auth_data.dart';
+import 'package:flutter_to_do_list/screen/SingUP.dart';
+import 'package:flutter_to_do_list/screen/home.dart';
 
 class LogIN_Screen extends StatefulWidget {
   final VoidCallback show;
@@ -38,8 +40,7 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 20),
-              image(),
+              SizedBox(height: 230),
               SizedBox(height: 50),
               textfield(email, _focusNode1, 'Email', Icons.email),
               SizedBox(height: 10),
@@ -68,9 +69,14 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
             ),
             SizedBox(width: 5),
             GestureDetector(
-              onTap: widget.show,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SignUp_Screen(() {})));
+              },
               child: Text(
-                'Sign UP',
+                'Sign Up',
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 14,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
 import 'package:flutter_to_do_list/data/auth_data.dart';
+import 'package:flutter_to_do_list/screen/home.dart';
+import 'package:flutter_to_do_list/screen/login.dart';
 
 class SignUp_Screen extends StatefulWidget {
   final VoidCallback show;
@@ -14,11 +16,9 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
   FocusNode _focusNode1 = FocusNode();
   FocusNode _focusNode2 = FocusNode();
   FocusNode _focusNode3 = FocusNode();
-
-  final email = TextEditingController();
-  final password = TextEditingController();
   final PasswordConfirm = TextEditingController();
-
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
   @override
   void initState() {
     // TODO: implement initState
@@ -42,8 +42,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 20),
-              image(),
+              SizedBox(height: 200),
               SizedBox(height: 50),
               textfield(email, _focusNode1, 'Email', Icons.email),
               SizedBox(height: 10),
@@ -74,7 +73,10 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           ),
           SizedBox(width: 5),
           GestureDetector(
-            onTap: widget.show,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LogIN_Screen(() {})));
+            },
             child: Text(
               'Login',
               style: TextStyle(
@@ -156,23 +158,6 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
                 width: 2.0,
               ),
             ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget image() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: Container(
-        width: double.infinity,
-        height: 300,
-        decoration: BoxDecoration(
-          color: backgroundColors,
-          image: DecorationImage(
-            image: AssetImage(''),
-            fit: BoxFit.fitWidth,
           ),
         ),
       ),
